@@ -1,0 +1,47 @@
+# ===============================
+# 基础缓存文件（Python / 系统）
+# ===============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.DS_Store
+.vscode/
+.idea/
+
+# ===============================
+# 数据与中间文件（太大，不进Git）
+# ===============================
+data/**/*.embed
+data/**/*.bertembed
+data/**/*.bin
+data/**/*.pickle
+data/**/*.zip
+data/**/*.tar.gz
+data/**/*.pkl
+data/**/*.npy
+data/**/*.npz
+data/**/*.pt
+
+# ===============================
+# 实验输出与模型结果
+# ===============================
+experiments/
+slurm_logs/
+checkpoints/
+runs/
+logs/
+*.pth
+*.pt
+*.ckpt
+
+# ===============================
+# 临时脚本或下载内容
+# ===============================
+download_bert_model.sh
+*.log
+*.tmp
+*.bak
+*.cache
+*.txt~
