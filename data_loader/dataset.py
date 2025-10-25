@@ -211,10 +211,10 @@ class MAGDataset(object):
 
         # load embedding features
         print("Loading embedding ...")
-        embeddings = KeyedVectors.load_word2vec_format(embedding_file_name)
+        embeddings = KeyedVectors.load_word2vec_format(embedding_file_name, no_header=False)
         print(f"Finish loading embedding of size {embeddings.vectors.shape}")
         print("Loading surface embedding ...")
-        bert_embeddings = KeyedVectors.load_word2vec_format(input_feature_name)
+        bert_embeddings = KeyedVectors.load_word2vec_format(input_feature_name, no_header=False)
         print(f"Finish loading bert embedding of size {bert_embeddings.vectors.shape}")
         
         assert bert_embeddings.vectors.shape == embeddings.vectors.shape

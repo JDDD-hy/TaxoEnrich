@@ -1,0 +1,60 @@
+2025-10-21 00:47:04,333 - train - INFO - number of trials: 1
+2025-10-21 00:48:06,706 - train - INFO - UnifiedDataLoader mode: rps
+	sampling_mode: 1
+	batch_size: 16
+	negative_size: 31
+	expand_factor: 40
+	cache_refresh_time: 64
+	normalize_embed: True
+	number_of_sib: 5
+2025-10-21 00:48:07,459 - train - INFO - MatchModel(
+  (p_lstm): LSTM(768, 500, batch_first=True)
+  (c_lstm): LSTM(768, 500, batch_first=True)
+  (p_control): Sequential(
+    (0): Linear(in_features=768, out_features=500, bias=False)
+    (1): ReLU()
+  )
+  (c_control): Sequential(
+    (0): Linear(in_features=768, out_features=500, bias=False)
+    (1): ReLU()
+  )
+  (attention_module): AttnBIM(
+    (W): Bilinear(in1_features=3304, in2_features=768, out_features=1, bias=False)
+  )
+  (match): Enrich(
+    (u): Linear(in_features=40, out_features=1, bias=False)
+    (u_l): Linear(in_features=10, out_features=1, bias=False)
+    (u_r): Linear(in_features=10, out_features=1, bias=False)
+    (u_e): Linear(in_features=10, out_features=1, bias=False)
+    (u_s): Linear(in_features=10, out_features=1, bias=False)
+    (f): LeakyReLU(negative_slope=0.2)
+    (W_l): Bilinear(in1_features=1268, in2_features=768, out_features=10, bias=True)
+    (W_r): Bilinear(in1_features=1268, in2_features=768, out_features=10, bias=True)
+    (W): Bilinear(in1_features=3304, in2_features=768, out_features=10, bias=True)
+    (V_l): Linear(in_features=2036, out_features=10, bias=False)
+    (V_r): Linear(in_features=2036, out_features=10, bias=False)
+    (V): Linear(in_features=4072, out_features=10, bias=False)
+    (W_s): Bilinear(in1_features=768, in2_features=768, out_features=10, bias=True)
+    (V_s): Linear(in_features=1536, out_features=10, bias=False)
+    (control): Sequential(
+      (0): Linear(in_features=4072, out_features=3304, bias=False)
+      (1): Sigmoid()
+    )
+    (control_l): Sequential(
+      (0): Linear(in_features=2036, out_features=1268, bias=False)
+      (1): Sigmoid()
+    )
+    (control_r): Sequential(
+      (0): Linear(in_features=2036, out_features=1268, bias=False)
+      (1): Sigmoid()
+    )
+    (control_s): Sequential(
+      (0): Linear(in_features=1536, out_features=768, bias=False)
+      (1): Sigmoid()
+    )
+  )
+  (embedding): Embedding(29655, 768)
+  (bert_embedding): Embedding(29655, 768)
+)
+Trainable parameters: 79028664
+2025-10-21 00:48:08,965 - trainer - WARNING - Warning: TensorboardX visualization is configured to use, but currently not installed on this machine. Please install the package by 'pip install tensorboardx' command or turn off the option in the 'config.json' file.

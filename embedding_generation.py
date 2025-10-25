@@ -1,7 +1,8 @@
 import torch
 import networkx as nx
 from tqdm import tqdm
-from gensim.models.wrappers import FastText
+# from gensim.models.wrappers import FastText
+from gensim.models import FastText
 import data_loader.data_loaders as module_data
 import model.model as module_arch
 from parse_config import ConfigParser

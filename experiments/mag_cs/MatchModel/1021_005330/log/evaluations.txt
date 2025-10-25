@@ -1,0 +1,1 @@
+macro_mr	micro_mr	hit_at_1	hit_at_5	hit_at_10	precision_at_1	precision_at_5	precision_at_10	mrr_scaled_10
